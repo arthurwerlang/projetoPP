@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Oi&family=Potta+One&display=swap"
+    rel="stylesheet">
+  <style>
+    .green-text {
+      color: #32662b; /* Cor verde */
+      transition: color 0.5s ease; /* Transição suave de cor */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fund">
+    <a href="index0.html">
+      <button class="button0">LOGIN</button>
+    </a>
+    <h1 id="title">Reeco</h1>
+    <div>
+      <a href="index4.html">
+        <button class="btn1">COMO FAZER A RECICLAGEM E DESPEJO DE FORMA CORRETA</button>
+      </a>
+    </div>
+    <div>
+      <a href="index3.html">
+        <button class="btn">SOBRE RECICLAGEM</button>
+      </a>
+    </div>
+    <div>
+      <a href="index.html">
+        <button class="btn">IR PARA O MAPA</button>
+      </a>
+    </div>
+
+    <!-- Imagem que muda automaticamente -->
+    <div>
+      <img id="changeableImage" src="1d.png" alt="Imagem Reeco" style="width: 200px; height: 200px;">
+    </div>
+
+  </div>
+
+  <script>
+    var images = ["2d.png", "2d.png"]; // Array contendo os caminhos das imagens
+    var currentIndex = 0; // Variável para acompanhar o índice da imagem atual
+
+    function changeImage() {
+      var image = document.getElementById('changeableImage');
+      var title = document.getElementById('title');
+      title.classList.add('green-text'); // Adiciona a classe para tornar o texto verde
+      image.src = images[currentIndex]; // Define o atributo src da imagem com o caminho da próxima imagem no array
+      currentIndex++; // Incrementa o índice para a próxima imagem
+    }
+
+    // Chama a função changeImage depois de 3 segundos (3000 milissegundos)
+    setTimeout(changeImage, 2000);
+  </script>
+</body>
+
+</html>
